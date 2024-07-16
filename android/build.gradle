@@ -1,0 +1,96 @@
+group = "com.qwary.qwray_plugin"
+version = "1.0-SNAPSHOT"
+
+buildscript {
+    ext.kotlin_version = "1.7.10"
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.2.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "kotlin-kapt"
+apply plugin: "maven-publish"
+
+
+android {
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.qwary.qwray_plugin"
+    }
+
+    compileSdk = 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    defaultConfig {
+        multiDexEnabled = true
+        minSdk = 24
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+
+
+    dependencies {
+        //implementation(project(":Qwary"))
+        //implementation project(':Qwary')
+        implementation 'com.android.support:appcompat-v7:28.0.0'
+        implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+        implementation("androidx.core:core-ktx:1.13.1")
+        implementation("androidx.appcompat:appcompat:1.6.1")
+        implementation("com.google.android.material:material:1.12.0")
+        implementation ("com.google.code.gson:gson:2.10.1")
+        testImplementation("org.jetbrains.kotlin:kotlin-test")
+        testImplementation("org.mockito:mockito-core:5.0.0")
+        implementation("com.qwary:qwary-android-sdk:1.0.7")
+
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+
+            testLogging {
+               events "passed", "skipped", "failed", "standardOut", "standardError"
+               outputs.upToDateWhen {false}
+               showStandardStreams = true
+            }
+        }
+    }
+}
+
+/*dependencies {
+    implementation project(':app')
+}*/
+
+
+/*dependencies {
+    implementation project(':Qwary')
+}*/

@@ -1,0 +1,35 @@
+PODS:
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - QwaryKit (1.0.0)
+  - qwray_plugin (0.0.1):
+    - Flutter
+    - QwaryKit
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - qwray_plugin (from `.symlinks/plugins/qwray_plugin/ios`)
+
+SPEC REPOS:
+  trunk:
+    - QwaryKit
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  qwray_plugin:
+    :path: ".symlinks/plugins/qwray_plugin/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
+  QwaryKit: 21644e8c880b01f76a6daf03c3ba314db1b3c6be
+  qwray_plugin: 1fe389b7d112894add1276c77cc02e771912a4f2
+
+PODFILE CHECKSUM: 1959d098c91d8a792531a723c4a9d7e9f6a01e38
+
+COCOAPODS: 1.15.2

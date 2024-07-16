@@ -1,6 +1,6 @@
-# flutterbloc
+# qwray_plugin_example
 
-A new Flutter project.
+Demonstrates how to use the qwray_plugin plugin.
 
 ## Getting Started
 
