@@ -40,18 +40,7 @@ class _MyAppState extends State<MyApp> {
     await QwrayPlugin().addEvent('NoCode');
     await QwrayPlugin().addEvent('T29_04_3');
 
-   /* String platformVersion;
-    try {
-      platformVersion =
-          await _qwrayPlugin.getPlatformVersion() ?? 'Unknown platform version';
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-    if (!mounted) return;
 
-    setState(() {
-      _platformVersion = platformVersion;
-    });*/
   }
 
   @override
@@ -63,49 +52,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Container()
 
-        /* Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () async {
-                  print('call configure function:');
-                   await QwrayPlugin().configure("c5e3e8c3-5b12-481d-a4c9-1570bd532860");
 
-                },
-                child: Text('Configure'),
-              ),
-              SizedBox(height: 20,) ,
-              ElevatedButton(
-                onPressed: () async {
-                  await QwrayPlugin().presentSurvey(true);
-                },
-                child: Text('Present Survey'),
-              ),
-              SizedBox(height: 20,) ,
-              ElevatedButton(
-                onPressed: () async {
-                  await QwrayPlugin().addEvent('T29_04_1');
-                },
-                child: Text('Add Event'),
-              ),
-              SizedBox(height: 20,) ,
-              ElevatedButton(
-                onPressed: () async {
-                  await QwrayPlugin().logout();
-                },
-                child: Text('Logout'),
-              ),
-              SizedBox(height: 20,) ,
-              ElevatedButton(
-                onPressed: () async {
-                  await QwrayPlugin().dismissActiveSurvey();
-                },
-                child: Text('Dismiss Active Survey'),
-              ),
-            ],
-          ),
-        ),*/
       ),
     );
   }

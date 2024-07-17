@@ -23,9 +23,6 @@ abstract class QwrayPluginPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
-  }
 
   Future<void> configure(String enironment_id) {
     throw UnimplementedError('platformVersion() has not been implemented.');

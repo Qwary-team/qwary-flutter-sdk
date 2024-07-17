@@ -9,11 +9,6 @@ class MethodChannelQwrayPlugin extends QwrayPluginPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('qwray_plugin');
 
-  @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
-  }
 
   @override
   Future<void> configure(String enironment_id) async {

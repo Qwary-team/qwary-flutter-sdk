@@ -29,17 +29,6 @@ class QwrayPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
     override fun onMethodCall(call: MethodCall, result: Result) {
 
         when (call.method) {
-            "getPlatformVersion" -> {
-
-                activityContext?.let {
-                    Qwary.configure(it, "c5e3e8c3-5b12-481d-a4c9-1570bd532860")
-                    result.success(null)
-                    // result.success("Android ${android.os.Build.VERSION.RELEASE}")
-                } ?: run {
-                    Log.e("QwrayPlugin", "Activity context is null")
-                    result.error("NO_ACTIVITY", "Activity context is not available", null)
-                }
-            }
             "configure" -> {
                 val enironment_id = call.argument<String>("enironment_id")
                 if (enironment_id != null) {

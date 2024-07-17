@@ -2,9 +2,7 @@
 import 'qwray_plugin_platform_interface.dart';
 
 class QwrayPlugin {
-  Future<String?> getPlatformVersion() {
-    return QwrayPluginPlatform.instance.getPlatformVersion();
-  }
+
 
   Future<void> configure(String enironment_id) {
     return QwrayPluginPlatform.instance.configure(enironment_id);

@@ -8,8 +8,7 @@ class MockQwrayPluginPlatform
     with MockPlatformInterfaceMixin
     implements QwrayPluginPlatform {
 
-  @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+
 
   @override
   Future<void> addEvent(String eventName) {
@@ -54,6 +53,6 @@ void main() {
     MockQwrayPluginPlatform fakePlatform = MockQwrayPluginPlatform();
     QwrayPluginPlatform.instance = fakePlatform;
 
-    expect(await qwrayPlugin.getPlatformVersion(), '42');
+   // expect(await qwrayPlugin.g(), '42');
   });
 }
