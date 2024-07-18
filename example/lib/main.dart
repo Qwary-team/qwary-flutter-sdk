@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:qwray_plugin/qwray_plugin.dart';
-import 'package:qwray_plugin/qwray_plugin_platform_interface.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,13 +30,11 @@ class _MyAppState extends State<MyApp> {
 
     await QwrayPlugin().configure("c5e3e8c3-5b12-481d-a4c9-1570bd532860");
 
-
     await QwrayPlugin().addEvent('T29_04_1');
     await QwrayPlugin().addEvent('HomePageVisitor');
     await QwrayPlugin().addEvent('T29_04_2');
     await QwrayPlugin().addEvent('NoCode');
     await QwrayPlugin().addEvent('T29_04_3');
-
 
   }
 
@@ -51,8 +46,6 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Container()
-
-
       ),
     );
   }

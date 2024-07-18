@@ -70,10 +70,12 @@ android {
   }
 }
 ```
-
-## iOS Installation Steps
-
-Add the `render.html` and `qw.intercept.sdk.merged.js` files to your project within the `Assets` folder. First, create an `Assets` folder at the location `ios/Assets`.
+```setting.gradle
+plugins {
+    id "com.android.application" version "8.1.0" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.10" apply false
+}
+```
 
 ## Android and iOS
 
