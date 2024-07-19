@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
-  - QwaryKit (1.0.0)
+  - QwaryKit (1.0.1)
   - qwray_plugin (0.0.1):
     - Flutter
     - QwaryKit
@@ -26,8 +26,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
-  QwaryKit: 21644e8c880b01f76a6daf03c3ba314db1b3c6be
+  integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
+  QwaryKit: 3b78e757f4c68615ff633ef00e972addad141038
   qwray_plugin: 1fe389b7d112894add1276c77cc02e771912a4f2
 
 PODFILE CHECKSUM: 1959d098c91d8a792531a723c4a9d7e9f6a01e38
